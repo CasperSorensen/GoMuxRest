@@ -2,7 +2,7 @@
 FROM golang:alpine AS builder
 RUN apk add --no-cache git
 WORKDIR /go/src/app
-COPY . .
+COPY ./app .
 RUN go build -o /go/bin/app -v .
 
 #final stage
