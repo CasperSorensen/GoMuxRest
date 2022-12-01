@@ -24,5 +24,5 @@ jobs:
       run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/go_rest_postgre:$(date +%s)
       
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/go_rest_postgre
+      run: docker push ${{secrets.DOCKER_USER}}/go_rest_postgre:$(date +%s)
       
